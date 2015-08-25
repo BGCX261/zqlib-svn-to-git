@@ -1,0 +1,34 @@
+#! /usr/bin/perl -w
+
+if (@ARGV < 2) {
+    print "Usage: grepsedfile oldpattern newpattern files...\n";
+    exit 1;
+}
+
+$oldpattern = $ARGV[0];
+$oldpattern =~ s!/!\\/!g;
+$newpattern = $ARGV[1];
+$newpattern =~ s!/!\\/!g;
+shift @ARGV;
+shift @ARGV;
+
+if (@ARGV == 0) {
+    exit 0;
+}
+
+$cmdline = 'grep -l';
+@args = ($oldpattern, @ARGV);
+foreach (@args) {
+    $cmdline .= ' ' . &shellEscape($_);
+}
+$cmdline .= ' | xargs sedfile -v ' .
+            &shellEscape('s/' . $oldpattern . '/' . $newpattern . '/g');
+
+exec $cmdline;
+
+sub shellEscape
+{
+    my($arg) = @_;
+    $arg =~ s/([][;&()<>{}|^\n\r\t *\$\\'"`?])/\\$1/g;
+    return $arg;
+}

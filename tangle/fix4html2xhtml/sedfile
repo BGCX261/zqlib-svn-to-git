@@ -1,0 +1,20 @@
+#! /bin/sh
+
+case "$#" in
+  0)  echo "Usage: sedfile 'sed_command' file_names..." 1>&2; exit 1
+esac
+
+sed_cmd=$1
+verbose=0
+if [ "$sed_cmd" = "-v" ]; then
+  verbose=1
+  shift
+  sed_cmd=$1
+fi
+while [ "$#" -ne 1 ]; do
+  shift
+  if [ $verbose -eq 1 ]; then
+    echo $1
+  fi
+  overwrite "$1" sed "$sed_cmd" "$1"
+done

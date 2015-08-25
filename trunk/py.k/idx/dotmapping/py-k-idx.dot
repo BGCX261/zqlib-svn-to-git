@@ -1,0 +1,84 @@
+digraph mainmap {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ dot test.dot -Tpng -o test.png -Tcmapx -o test.map
+        style=filled,
+        fillcolor=lightyellow,
+        ratio=compress,fill size="12,9",
+*/
+    graph [label="py.kingsoft.net 网站索引图谱\nZoom.Quiet{090312 12:24}",
+        labeljust="r",labelloc="b",
+        fontsize=14.0,
+        fontname="VeraSansYuanTi-Regular.ttf",        
+        center=1,
+        ratio=compress,
+        rankdir=TB,
+        ];
+    node[fontsize=11.5,
+        style=filled,fillcolor=lightyellow,
+        color=gray30,
+        shape=component,
+        ];
+    /*dir=both,shape=plaintext shape=folder*/
+    edge [fontsize=9.0,
+        fontcolor=gray25,
+        color=gray30,
+		arrowhead=vee,
+		arrowtail=none,
+        ];
+    /*服务关系*/
+    URL="http://py.kingsoft.net/";
+    
+    pyk->kspeg      [label="运维",];
+    kspeg->author->ZQ;
+    ZQ->zqblog;
+    ZQ->zqscrap->zqfloss; zqscrap->zqskm;
+    pyk->include->blog;
+    blog->zqblog;
+    
+    include->DEMO;
+    DEMO->ktrac->TEPs;
+    DEMO->MSG;
+    DEMO->TB;
+    DEMO->AMB;
+    
+    include->WPWIKI [label="只读镜像",];
+    include->OBP    [label="night build",];
+    OBP->pytut->pytut25; pytut->pytut26; pytut->pytut3k;
+    OBP->pydocs->pydocs26; pydocs->pydocs3k;
+    OBP->web2py;
+    
+    /*服务元素
+    is      [label="是",URL="http://wiki.rdev.kingsoft.net/moin/KUP"];
+    */
+    pyk      [label="py.kingsoft.net\n金山Py兴趣组",shape=plaintext,];
+    kspeg    [label="KSPEG\n~KingSoft\nProcess\nEnhancement\nGroup",shape=ellipse,URL="http://groups.google.com/group/kspeg"];
+    author   [label="有",shape=plaintext];
+    include  [label="含",shape=plaintext];
+    ZQ       [label="Zoom.Quiet",shape=egg,URL="http://zoomquiet.org"];
+    zqblog   [label="pythonic livin\nby PyBlosxom",URL="zq/pyb/"];
+    zqscrap  [label="ScrapBook\n网页收集分享",shape=tab,URL="zq/scrap/"];
+    zqfloss   [label="FLOSS\n自由/开源软件\n相关",shape=tab,URL="zq/scrap/floss/"];
+    zqskm    [label="SKM\n社会化知识管理\n相关",shape=tab,URL="zq/scrap/skm/"];
+    
+    blog     [label="Blogging",shape=tab,URL="blog/"];
+    WPWIKI   [label="Wiki\nWoodpecker.org.cn",URL="wiki/"];
+    
+    DEMO     [label="demo\n团队作品集锦",shape=tab,URL="demo/"];
+    ktrac    [label="KTRAC\n~Kingsoft\nTask\nRigour\nand\nAgile\nChannel",URL="http://trac-hacks.org/wiki/ZoomQuiet"];
+    TEPs     [label="TEPs\n~Trac\nEnhancement\nProposals",URL="demo/ktrac/"];
+    MSG      [label="MSG\n~Message\nSent\nGhost",URL="demo/msg/"];
+    TB       [label="Astinus\n~Assistant\nSystem\nof\nTime\nInvoices\nNatural\nUnite\nStatistics",URL="demo/ast/"];
+    AMB      [label="Amoebar\n~A\nmulti\nobject\nexchange\nbar",URL="demo/amb/"];
+
+    OBP      [label="OBP\n~Open\nBook\nProjects",shape=tab,URL="http://code.google.com/p/openbookproject/"];
+    pytut    [label="Python Tutorial\nPy手册中文版",shape=tab,URL="obp/pytut/"];
+    pytut25  [label="Py手册中文版\nv2.5",URL="obp/pytut/25/"];
+    pytut26  [label="Py手册中文版\nv2.6",URL="obp/pytut/26/"];
+    pytut3k  [label="Py手册中文版\nv3.0",URL="obp/pytut/3000/"];
+    pydocs   [label="Python Document\nPy文档",shape=tab,URL="obp/pydocs/"];
+    pydocs26 [label="Py文档\nv2.6",URL="obp/pydocs/26/"];
+    pydocs3k [label="Py文档\nv3.0",URL="obp/pydocs/3000/"];
+    web2py   [label="web2py manual\nweb2py 手册中文版",URL="obp/web2py/man/"];
+
+}
+

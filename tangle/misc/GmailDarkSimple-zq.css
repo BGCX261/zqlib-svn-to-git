@@ -1,0 +1,446 @@
+/* Gmail Dark & Simple  | created 01/08/2008 *
+ * Coded by Karim Kadri | updated 25/08/2008 
+ * Fixed by Zoom Quiet  | updated 03/09/2008 
+  * by Zoom Quiet  | fixed hover color 08/09/2008 */
+
+@-moz-document domain(mail.google.com){
+
+/* -Loading screen- */
+#loading #loadingError, #loading #stb, .Ax9Ooe
+{display: none !important}
+#loading
+{background: #000000 !important}
+#loading .msg
+{color : #444 !important; font-size: 15px !important; font-weight: normal !important; text-align: center !important; margin: 3% 0 0 0 !important}
+#loading .lpb
+{background: #444 !important; height: 15px !important; border : none !important; margin: .7% auto !important}
+#loading #lpt
+{background: #CCFF55 !important}
+
+/* -Mail screen- */
+                                                  /* Remove :              */
+#gbar,                                            /*      Header Bar Links */
+[id=":rc"],                                       /*         Older Version */
+#guser > nobr > span,                             /*                  Help */
+div[class="tYBwhe"] button:last-child,            /*     Search web button */
+.SUicbd,                                          /*        Search Options */
+/* .ybaOyc>div>div:first-child+div,
+.lHQn1d, .N2mZ7b col.Em3Oie, .N2mZ7b td.mka4te,   /*        Staring System */
+.gUlKtd,                                          /*            Star image */
+.a3hTGd,                                          /*           Chat System */
+/* .ybaOyc>div>div:first-child+div+div,           /*                 Chats */
+.aBJ8he,                                          /*           Chats image */
+.ybaOyc>div>div:first-child+div+div+div+div+div,  /*              All Mail */
+/* .XPj4ef, .C5uTre, .Ir5Jyf, .kN8OP,             /*                Labels */
+.I94Sdc,                                          /*       Invite a friend */
+/* .QOD9Ec,                                       /*          More Actions */
+.DiWSpb,                                          /*               Refresh */
+.bKmyId,                                          /*                Select */
+.FVNmUc,                                          /*     Contact Info Card */
+.gQ8wIf,                                          /*                 Reply */
+td[class="eWTfhb"]>div[class="XoqCub"]:last-child,/*                   Ads */
+.s7hnoe,                                          /*                Footer */
+.IUntof,                                          /*      Google Copyright */
+.haNaWc,                                          /*            Gmail view */
+.VfONdd                                           /* Last account activity */
+{display: none !important}
+
+/* Main Background */
+body
+{background-color: #000 !important; margin-top: -1px !important}
+.WrxLMd
+{display: none !important}
+
+/* Search mail */
+.tYBwhe
+{position: absolute !important; top: 0.45em !important; left: 9.6em !important}
+.oF1kyb input
+{border: none  !important; -moz-appearance: none !important; background-color: #2A2A2A !important; color: #A2A2A2 !important; width : 200px !important}
+.tYBwhe button
+{font-size : 13px !important; color : #A2A2A2 !important; background-color : #2A2A2A !important; border : none !important; -moz-appearance: none !important}
+.tYBwhe button:hover
+{background-color : #A2A2A2 !important; color : #2A2A2A !important}
+
+/* Notification Message */
+.QShok .R7iiN, .QShok .wWwc8d {background: transparent !important; color: #CCFF55 !important; position: fixed !important; top: 12px !important; left: 17px !important}
+
+/* Account, settings & sign out */
+.nQ6QTe
+{margin-right: 0.55em !important; color: #A2A2A2 !important}
+
+/* Account space usage */
+.LaiJff
+{position: absolute !important; top: 1.9em !important; right: 1.25em !important; font-size: 7.5pt !important; color: #A2A2A2 !important}
+
+/* Left menu */
+HTML > BODY > IFRAME:first-child + DIV > DIV > DIV > DIV:last-child > DIV:first-child > DIV:first-child + DIV
+{position: fixed !important; margin-left: 13px !important; margin-top: 10px !important}
+.zYsCRb
+{height: 59px !important; width: 143px !important; background: #000 url(http://mail.google.com/mail/images/2/5/logo.png) no-repeat !important; position: fixed !important; margin-top: 11px !important}
+.cBhtOe .NIPhib
+{background: #2A2A2A !important; border-left : 4px solid #2A2A2A !important; border-top : 1px solid #2A2A2A !important; border-bottom : 1px solid #2A2A2A !important; margin-left: -4px !important}
+.ybaOyc .R7iiN
+{background-color : transparent !important}
+.PQmvpb
+{font-weight: lighter !important}
+
+/* Labels */
+/* Labels - Title */
+.TKgXkb .R7iiN, .C9Pn8c
+{background: transparent !important}
+.TKgXkb .Tzvkxd > div > .Pj5gjf, .LrIFMe
+{display: none !important}
+.TKgXkb .Tzvkxd > div > .R7iiN
+{height: 16px !important}
+.oggeve .HSZged
+{color: #A2A2A2 !important; font-size: 13px !important; line-height: 20px !important; margin-left: -3px !important}
+
+/* Labels - Labels name */
+.WnjAod .zD5BAe
+{background: #424242 !important; color: #A2A2A2 !important; font-size: 10px !important; padding: 1px 0 1px 3px !important; border-bottom: 1px solid #2A2A2A !important; display: block !important}
+/* ZoomQuiet 080908fixed: #CCFF55->#EEE9BF*/
+.WnjAod .zD5BAe:hover
+{background: #EEE9BF !important; color: #000 !important}
+.nb1Q2b, .pvSW6e, .WnjAod div
+{padding: 0 !important}
+
+/* Labels - Colors */
+.dmby2e
+{font-size: 0 !important; height: 8px !important}
+.XPj4ef .WnjAod .BFvfre
+{position: absolute !important; right: 13px !important; width: 0 !important; height: 0 !important}
+.qn0D4e
+{padding: 1px !important; width: 11px !important; margin-top: 2px !important}
+.IHs6ib .goog-menu
+{background: #424242 !important; border: 3px solid #2A2A2A !important; color: #A2A2A2 !important; font-size: 10px !important}
+.IHs6ib .goog-menuitem-highlight
+{background: #CCFF55 !important; color: #000 !important; text-decoration: none !important}
+.IHs6ib .goog-palette
+{padding: 3px !important}
+.IHs6ib .goog-palette-cell
+{font-size: 10px !important}
+.IHs6ib .goog-palette-colorswatch
+{border: 1px solid #424242 !important; height: 12px !important; width: 12px !important}
+.IHs6ib .goog-palette-cell-hover .goog-palette-colorswatch
+{border: 1px solid #FFF !important}
+
+/* Labels - Message labels */
+.lMVONe div
+{margin-bottom: 1px !important; border: none !important}
+
+/* labels - Footer */
+.XPj4ef .Qj7Rff
+{height: 10px !important; padding: 0 !important; text-decoration: none !important; width: 119px !important}	
+.XPj4ef .Q9o7yd
+{color: #A2A2A2 !important; float: right !important; font-size: 10px !important; margin: 1px 2px 0 0 !important}
+/* ZoomQuiet 080908fixed: #CCFF55->#EEE9BF*/
+.XPj4ef .Q9o7yd:hover
+{color: #EEE9BF !important}
+
+/* Labels - Autohide */
+.nb1Q2b
+{background: #424242 !important; border: 3px solid #2A2A2A !important; display: none !important; bottom: -3px !important; left: -2px !important; position: relative !important; width: 200px !important; z-index: 1 !important}
+.XPj4ef:hover .nb1Q2b
+{display: block !important}
+.pvSW6e,.XPj4ef .Qj7Rff,.XPj4ef .WnjAod td
+{width: 200px !important}
+
+/* Labels - Settings */
+.f8w49d
+{color: #CCFF55 !important; text-decoration: none !important}
+
+/* Labels - Popups */
+.jY0YJb
+{background: #2A2A2A !important; border: solid #424242 !Important}
+.nfZEf
+{background: 0 !important; color: #CCFF55 !important; cursor: default !important; font-size: 12px !important; padding: 0px 12px !important; margin-top: 8px !important}
+.WbpRRe
+{background: 0 !important; color: #A2A2A2 !important; font-size: 11px !important; padding-left: 12px !important}
+.URTWZe
+{-moz-appearance: none !important; background: #424242 !important; color: #A2A2A2 !important; border: 0 !important; font-size: 11px !important; margin: 3px !important; width: 420px !important}
+.tQzAEe {background: 0 !important; text-align: center !important; margin-bottom: 8px !important}
+.tQzAEe button {background-color: #424242 !important; color: #A2A2A2 !important; font-size: 11px !important; border : none !important; -moz-appearance: none !important}
+.tQzAEe button:hover
+{background: #CCFF55 !important; color: #424242 !important}
+
+/* Hide round Corners */
+.Pj5gjf
+{visibility : hidden !important}
+
+/* Body Frame */
+.Y1jEjc .R7iiN, .oi23Hf .R7iiN, .lLzmXd .R7iiN, .xNSvsd .R7iiN, .ar6Hkf .R7iiN
+{background: #2A2A2A !important; border-top : 2.5px solid #2A2A2A !important; border-bottom : 1px solid #2A2A2A !important}
+.Ch5Hj
+{background-color: #424242 !important; border-color: #2A2A2A !important; color: #A2A2A2 !important}
+.XoqCub > table.NQNkZd,#tbd
+{background-color: #424242 !important; color: #A2A2A2 !important}
+.XoqCub > table.NQNkZd td
+{border: none !important}
+
+/* Body Position */
+HTML > BODY > IFRAME:first-child + DIV > DIV > DIV > DIV:last-child > DIV:first-child > DIV:first-child + DIV + DIV 
+{margin-left: 145px !important; margin-top: -63px !important}
+
+/* Body top buttons */
+.Gjckbb:first-child
+{display: none !important}
+.c1I77d button, .Gjckbb
+{font-size : 11px !important; color : #A2A2A2 !important; background-color : #424242 !important; border : none !important; -moz-appearance: none !important}
+.c1I77d button:hover, .Gjckbb:hover
+{background-color : #CCFF55 !important; color : #424242 !important}
+
+.QOD9Ec
+{background: 0 !important; border: 0 !important; font-size: 13px !important; color: #A2A2A2 !important; margin-top: -2px !important}
+.QOD9Ec:hover
+{color: #CCFF55 !important}
+.QOD9Ec > img
+{display: none !important}
+.Sn99bd
+{border: 3px solid #2A2A2A !important}
+.Sn99bd div
+{background: #424242 !important; color: #A2A2A2 !important}
+.Sn99bd div.QrJiv
+{color: #CCFF55 !important}
+.Sn99bd div.BHnKkc
+{color: #2A2A2A !important}
+.Sn99bd div.P0GJpc
+{background: #CCFF55 !important; color: #000 !important; cursor: pointer !important}
+
+/* Sent Mail text color */
+.opbAfb {color: #A2A2A2 !important}
+
+/* Editor */
+.VByZEe, .BldZyd
+{background-color: #424242 !important}
+.qZkfSe
+{color: #424242 !important; text-decoration: none !important}
+.x1Kcd {color: #A2A2A2 !important; font-size: 11px !important; margin-left: 20px !important; top: auto !important}
+.INkyme, .DTkpKe
+{display: none !important}
+.rwfzSd
+{background-color: #A2A2A2 !important; border: 1px solid #A2A2A2 !important}
+.rwfzSd:hover
+{border: 1px solid #CCFF55 !important}
+.P95xvf
+{display: none !important}
+.MRoIub, .mrKIf, .Z5xHXe .t0Pj3c
+{color: #A2A2A2 !important; text-decoration: none !important}
+.rSfjbb, .mMl8gd
+{border: none !important; background-color: #424242 !important; color: #A2A2A2 !important; -moz-appearance: none !important}
+.uQLZXb, .c1I77d, .zWhFxc
+{background-color : #2A2A2A !important}
+.uQLZXb td
+{color : #A2A2A2 !important}
+.JRJslf
+{border: none !important}
+body.editable
+{background: #FFF !important} 
+
+/* Messages Checkboxes */
+td.je3qIf input
+{margin: 0 0 2px 0 !important; -moz-appearance: none !important; -moz-border-bottom-colors: #A2A2A2 #FFF !important; -moz-border-left-colors: #A2A2A2 #FFF !important; -moz-border-right-colors: #A2A2A2 #FFF !important; -moz-border-top-colors: #A2A2A2 #FFF !important}
+td.je3qIf input:hover
+{-moz-border-bottom-colors: #424242 #FFF !important; -moz-border-left-colors: #424242 #FFF !important; -moz-border-right-colors: #424242 #FFF !important; -moz-border-top-colors: #424242 #FFF !important}
+
+/* Messages Stars */
+.N2mZ7b .v0AEPd, .QgQaBc, .n1QcP, .kyZrld
+{background: transparent url(http://kkadri.googlepages.com/stars.png) no-repeat !important; height: 0 !important; margin: -2px !important; padding: 20px 20px 0 0 !important}
+.N2mZ7b .v0AEPd, .QgQaBc
+{background-position: 0px -20px !important}
+.n1QcP, .kyZrld
+{background-position: 0px 1px !important}
+
+/* Messages Highlight */
+.AnqB9d
+{background-color: #424242 !important; color: #A2A2A2 !important}
+.QhHSYc
+{background-color: #A2A2A2 !important; color: #424242 !important}
+/* ZoomQuiet 080908fixed: #CCFF55->#EEE9BF*/
+.AnqB9d:hover, .QhHSYc:hover
+{background-color: #EEE9BF !important; color: #2A2A2A !important}
+
+/* Messages separator color */
+TD
+{border-color: #2A2A2A !important}
+
+/* Attachment and Date */
+.FFqkkb
+{background: transparent url(http://kkadri.googlepages.com/clip.png) no-repeat !important}
+.bLKGFb
+{width: 68px !important}
+
+/* Fonts colors ZQ's 080903 fixed #a2a2a2~ #415F90 */
+.rj1J6b, .vwcZUe, :not(.HhG5wd)>span[role="link"], .vZFPPc, .z8N7nd, .zD5BAe, .l73JSe
+{color: #a2a2a2 !important; text-decoration: none !important}
+a:link, a:visited, .link, a:active, .link:active
+{color: #415F90 !important; text-decoration: none !important}
+
+/* Message */
+
+/* Message - Body colors ZQ;s 080903 fixed #FFFFFF~ #E8E5CA*/
+.MMcQxe
+{background-color : #424242 !important}
+.YrSjGe
+{background-color: #E8E5CA !important; margin-left: -2px !important; border-left : 4px solid #E0DCB8 !important}
+.eNXyxd
+{background-color : #E8E5CA !important}
+
+/* Message - Fonts colors */
+.EP8xU, .ckChnd, .A5liqb, .X5Xvu, .D05ws
+{font-size : 11px !important; color : #000000 !important}
+.VrHWId
+{color : #CCCCCC !important}
+
+/* Contacts */
+
+/* Contacts - Body colors */
+#Node3, .group-list
+{background : #2A2A2A !important}
+.checkable-list .check, .checkable-list, .checkable-list>div
+{background : #424242 !important}
+.contacts-list-actions
+{background: #424242 !important; border: 6px #424242 solid !important; color: #A2A2A2 !important; font-size: 11px !important}
+#manager-group-list hr
+{display: none !important}
+
+/* Contacts - Links colors ZQ's 080903 fixed #a2a2a2~ #415F90 */
+.manager-page a, .manager-page a:link, .manager-page a:visited
+{color : #415F90 !important; text-decoration: none !important}
+
+/* Contacts - Top buttons */
+#manager-new-contact2, #manager-new-group2
+{background: #2A2A2A !important; border: 1px solid #424242 !important; height: 18px !important; margin-left: 2px !important}
+#manager-new-contact2 img, #manager-new-group2 img
+{margin-top: 1px !important}
+/* ZoomQuiet 080908fixed: #CCFF55->#EEE9BF*/
+#manager-new-contact2:hover, #manager-new-group2:hover
+{border: 1px solid #EEE9BF !important}
+
+/* Contacts - Search */
+.manager-page .search-box img
+{display: none !important}
+.manager-page .search-box
+{width: 189px !important; height: 17px !important; border : 1px solid #424242 !important; background-color : #2A2A2A !important}
+.manager-page .search-box input
+{width: 189px !important; background-color : #2A2A2A !important; color : #424242 !important; margin-top: 1px !important}
+
+/* Contacts - Add to this group */
+.manager-page .add-to-group-box
+{background-color : #2A2A2A !important; border : none !important}
+.manager-page .add-to-group-box input
+{background-color : #2A2A2A !important; color : #A2A2A2 !important; margin-bottom: 2px !important}
+
+/* Contacts - Highlights */
+.group-list .text, .checkable-list .text
+{color : #A2A2A2 !important}
+.group-list .selected
+{background-color: #424242 !important}
+.checkable-list .selected
+{background-color: #2A2A2A !important}
+.group-list .selected .text, .checkable-list .selected .text
+{color : #A2A2A2 !important}
+.group-list .active, .checkable-list .active
+{background-color: #CCFF55 !important}
+.group-list .active .text, .checkable-list .active .text
+{color: #424242 !important}
+
+/* Settings */
+
+.TPdeOc .vHYYR, .TPdeOc .c1norb, .tAYBjb .GVhBfc
+{background: #000 !important}
+
+.lowmzb
+{background: #000 !important; font-size: 0px !important}
+
+.GVhBfc .ZOB6Zc
+{background: #2A2A2A !important; color: #CCFF55 !important; border: none !important; font-size: 11px !important; font-weight: normal !important; margin-left: -2px !important}
+
+.GVhBfc .AiCerc
+{background: #424242 !important; border: none !important; font-size: 11px !important; color: #000 !important; font-weight: normal !important; text-decoration: none !important; margin-left: -2px !important}
+.GVhBfc .AiCerc:hover
+{background-position: bottom !important; color: #CCFF55 !important}
+
+.eGbrz
+{background: #2A2A2A !important; color: #A2A2A2 !important; margin-left: -2px !important}
+
+.GorKne
+{font-size: 12px !important}
+
+.GorKne a, .GaVz0
+{color: #424242 !important; text-decoration: none !important}
+
+.WwReqb select
+{margin: 0 4px !important}
+
+.rfHc7d
+{border: 1px solid #424242 !important}
+
+.QvGOhc {font-size: 10px !important}
+
+.yBJvEc label{font-size: 10px !important; font-weight: normal !important}
+
+.v3Xvvc {width: 4.2em !important}
+
+.JuLp9 textarea, .GPKGxc input, .GPKGxc textarea {background-color: #424242 !important; color: #A2A2A2 !important; border: none !important; -moz-appearance: none !important}
+
+.GorKne>td>form>input, [id=":wb"] {background-color: #424242 !important; color: #A2A2A2 !important; border: none !important; -moz-appearance: none !important; max-height: 15px !important; padding-top: 0px !important; margin-top: 3px !important}
+
+.GorKne button{background-color: #424242 !important; color: #A2A2A2 !important; font-size: 11px !important; border : none !important; -moz-appearance: none !important}
+
+.GorKne button:hover
+{background: #CCFF55 !important; color: #424242 !important}
+
+.lwwhL
+{background: #424242 !important; height: 1px !important}
+
+}
+
+@-moz-document url-prefix("https://www.google.com/accounts/ServiceLogin"){
+
+table[bgcolor="#C3D9FF"], table>tbody>tr>td>b, td[width="75%"], input[class="gaia le button"], .form-noindent[cellpadding="0"], body>table>tbody>tr>td[bgcolor='#ffffff'], #gaia_table #ga-fprow td,
+#gaia_table>tbody>tr>td>font, #gaia_table>tbody>tr>td>table
+{display: none !important}
+
+input {-moz-appearance: none !important}
+
+body
+{background: #000 !important; color: #A2A2A2 !important; margin: 3% 0 0 0 !important}
+
+body > table td[width='1%']
+{height: 59px !important; width: 143px !important; background: #000 url(http://mail.google.com/mail/images/2/5/logo.png) no-repeat !important; position: absolute !important; margin: 90px 0 0 -192px !important}
+
+body > table td[width='1%'] img
+{height: 0 !important}
+
+table[width="95%"], table[width="94%"]
+{width: 0px !important}
+
+#gaia_loginbox
+{width: 90px !important; margin-top: 45px !important}
+
+#gaia_loginbox .form-noindent, #gaia_loginbox table td
+{background: transparent !important; border: none !important}
+
+#gaia_table .lbl
+{color: #A2A2A2 !important; margin-right: 5px !important}
+
+div.errormsg
+{color: #CCFF55 !important; font-size: 10px !important; margin-top: -90px !important; margin-left: -48px !important; width: 200px !important}
+div.errormsg a
+{color: #CCC !important; text-decoration: none !important}
+div.errormsg a:hover
+{color: #CCFF55 !important}
+
+#gaia_table #Email, #gaia_table #Passwd
+{background: #000 !important; border: 1px solid #2A2A2A !important; color: #A2A2A2 !important; padding: 2px 1px !important; width: 150px !important}
+/*ZQ's fixed #A2A2A2~#1E2C43*/
+a:link
+{color: #a2a2a2 !important; text-decoration: none !important}
+
+#gaia_table .rem
+{color: #A2A2A2 !important; font-size: 10px !important; margin: -25px !important}
+
+#PersistentCookie
+{cursor: pointer !important; -moz-border-bottom-colors: #000 !important; -moz-border-left-colors: #000 !important; -moz-border-right-colors: #000 !important; -moz-border-top-colors: #000 !important; margin: 10px 30px 10px !important}
+
+}
